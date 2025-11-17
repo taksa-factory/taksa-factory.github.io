@@ -1,4 +1,4 @@
-Takşa - The Open Source Factory OS
+## Takşa - The Open Source Factory OS
 
 This repository hosts the official website for Takşa, an open-source factory operating system from the labs of ARTPARK @ IISc.
 
