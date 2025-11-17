@@ -1,14 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Taksa</title>
-  <style>
-    body { font-family: Arial, sans-serif; display: grid; place-items: center; min-height: 80vh; background-color: #f4f4f4; }
-    h1 { font-size: 4rem; color: #333; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takşa - The Open Source Factory OS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Gray */
+            color: #E5E7EB; /* Light Gray */
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/0a0a0a/333333?text=Factory+Automation');
+            background-size: cover;
+            background-position: center;
+        }
+        .section {
+            padding: 6rem 1rem;
+        }
+        .card {
+            background-color: #1F2937; /* Lighter Dark Gray */
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #3B82F6; /* Blue */
+        }
+        .btn-primary {
+            background-color: #3B82F6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #2563EB;
+        }
+        .partner-logo {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #9CA3AF;
+            margin: 0 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body>
-  <h1>Taksa</h1>
-  <p>Our new website is coming soon.</p>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <nav class="sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <svg class="w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.83-5.83M11.42 15.17L15.17 11.42M11.42 15.17l-1.42 1.42a2.652 2.652 0 01-3.75 0l-1.08-1.08a2.652 2.652 0 010-3.75l1.42-1.42M15.17 11.42l-1.42-1.42a2.652 2.652 0 00-3.75 0l-1.08 1.08a2.652 2.652 0 000 3.75l1.42 1.42m0-11.42a3 3 0 00-3-3h-3.75a3 3 0 00-3 3v3.75a3 3 0 003 3h3.75a3 3 0 003-3V3.75z" />
+                    </svg>
+                    <span class="ml-3 text-2xl font-bold text-white">Takşa</span>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 font-medium">About</a>
+                    <a href="#features" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 font-medium">Features</a>
+                    <a href="#involved" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 font-medium">Get Involved</a>
+                    <a href="#contact" class="btn-primary ml-4">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+                Takşa: The Open Source Factory OS
+            </h1>
+            <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+                Empowering India's Manufacturing MSMEs with AI-powered insights and Industry 5.0 capabilities.
+            </p>
+            <p class="mt-4 text-2xl font-bold text-white">
+                From India. For the World.
+            </p>
+            <div class="mt-10">
+                <a href="#features" class="btn-primary text-lg">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners Section -->
+    <div class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">
+                From the labs of
+            </p>
+            <div class="flex flex-wrap justify-center items-center">
+                <span class="partner-logo p-2">ARTPARK @ IISc</span>
+                <span class="partner-logo p-2">Indian Institute of Science</span>
+                <span class="partner-logo p-2">Dept. of Science & Technology</span>
+                <span class="partner-logo p-2">Government of Karnataka</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base font-semibold text-blue-400 tracking-wide uppercase">Why We Are Here</h2>
+                <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                    Setting the Stage for India's Manufacturing Growth
+                </p>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                    Takşa is building an Atmanirbhar Bharat by cutting down complexity, bridging the information flow across the value chain, and democratizing access to next-generation technology.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="section bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    Enabling MSMEs for the AI Era
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="card">
+                    <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+                    </svg>
+                    <h3 class="mt-4 text-xl font-bold text-white">Digitize Every Process</h3>
+                    <p class="mt-2 text-gray-300">From the shop floor to the cloud, gain complete visibility and control over your operations.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="card">
+                    <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM10.34 10.34c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM10.34 4.84c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM15.84 15.84c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM15.84 10.34c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM15.84 4.84c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM20.34 15.84c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM20.34 10.34c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zM20.34 4.84c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25z" />
+                    </svg>
+                    <h3 class="mt-4 text-xl font-bold text-white">AI-Powered Insights</h3>
+                    <p class="mt-2 text-gray-300">Use predictive maintenance, quality monitoring, and advanced optimization to save costs and boost productivity.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="card">
+                    <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m11.25 0v-4.5a4.5 4.5 0 00-9 0v4.5A4.5 4.5 0 005.625 15H18.375a4.5 4.5 0 004.125-4.5zM12 15v3.75m0 0h-3.75m3.75 0h3.75M12 15v-3.75" />
+                    </svg>
+                    <h3 class="mt-4 text-xl font-bold text-white">Open, Secure & Transparent</h3>
+                    <p class="mt-2 text-gray-300">Freedom to build, customize, and innovate with a secure, community-driven, and transparent platform.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="card">
+                    <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c.171.127.375.19.58.19h3.082c.205 0 .409-.063.58-.19l.879-.659M7.5 14.25l.879.659c.171.127.375.19.58.19h3.082c.205 0 .409-.063.58-.19l.879-.659M7.5 14.25V5.106c0-.987.802-1.79 1.79-1.79h5.42c.987 0 1.79.802 1.79 1.79v9.144" />
+                    </svg>
+                    <h3 class="mt-4 text-xl font-bold text-white">Affordable & Scalable</h3>
+                    <p class="mt-2 text-gray-300">Designed to bring Industry 5.0 capabilities within reach of every Indian manufacturer, large or small.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get Involved Section -->
+    <div id="involved" class="section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    What We Are Looking For
+                </h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                    We seek visionary partners to drive the future of manufacturing in India.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Audience 1 -->
+                <div class="card flex items-center">
+                    <svg class="w-16 h-16 text-blue-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6M9 11.25h6m-6 4.5h6M3 3h18c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5H3c-.828 0-1.5-.672-1.5-1.5v-15C1.5 3.672 2.172 3 3 3z" />
+                    </svg>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-white">Factory Owners & MSMEs</h3>
+                        <p class="mt-1 text-gray-300">Be an Early Adopter and see the change in your productivity and efficiency.</p>
+                    </div>
+                </div>
+                <!-- Audience 2 -->
+                <div class="card flex items-center">
+                    <svg class="w-16 h-16 text-blue-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5 0a9 9 0 11-9 9" />
+                    </svg>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-white">FOSS Contributors</h3>
+                        <p class="mt-1 text-gray-300">Join our community. Help build, innovate, and shape the future of Takşa OS.</p>
+                    </div>
+                </div>
+                <!-- Audience 3 -->
+                <div class="card flex items-center">
+                    <svg class="w-16 h-16 text-blue-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 00-3.071-2.257m-2.257-2.257a9.094 9.094 0 00-2.257-3.071m0 0a9.094 9.094 0 00-2.257-3.071m2.257 3.071a9.094 9.094 0 00-3.071 2.257m5.328 5.328a9.094 9.094 0 01-2.257 3.071m-2.257 3.071a9.094 9.094 0 01-3.071-2.257m5.328 5.328a9.094 9.094 0 01-3.071 2.257M6.72 18.72a9.094 9.094 0 01-2.257-3.071m-2.257-3.071a9.094 9.094 0 01-2.257-3.071m2.257-3.071A9.094 9.094 0 016.72 6.72m3.071 0A9.094 9.094 0 019.79 3.649m2.257 2.257A9.094 9.094 0 0112 3.649m3.071 2.257A9.094 9.094 0 0114.328 3.65m2.257 2.257A9.094 9.094 0 0117.35 6.72m3.071 0A9.094 9.094 0 0120.35 9.79" />
+                    </svg>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-white">System Integrators</h3>
+                        <p class="mt-1 text-gray-300">Partner with us to deploy and support Takşa OS for clients across India.</p>
+                    </div>
+                </div>
+                <!-- Audience 4 -->
+                <div class="card flex items-center">
+                    <svg class="w-16 h-16 text-blue-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M8.288 15.038a5.25 5.25 0 007.424 0M15 11.25a3 3 0 11-6 0 3 3 0 016 0zM12 4.875A5.25 5.25 0 006.75 10.125v3.75a5.25 5.25 0 005.25 5.25h.008a5.25 5.25 0 005.25-5.25v-3.75A5.25 5.25 0 0012 4.875z" />
+                    </svg>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-white">Hardware & IoT Makers</h3>
+                        <p class="mt-1 text-gray-300">Integrate your devices and sensors with our platform. Let's build a connected ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                Join Us and Spread the Word
+            </h2>
+            <p class="mt-4 text-lg text-gray-300">
+                Let's make India the next generation smart manufacturing hub, together.
+            </p>
+            <div class="mt-10">
+                <a href="mailto:taksa@artpark.in" class="btn-primary text-xl">
+                    Talk to Us: taksa@artpark.in
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-base text-gray-400">
+                &copy; 2025 Takşa Factory OS @ ARTPARK
+            </p>
+            <p class="text-base text-gray-400 mt-1">
+                Website URL: https://taksa-factory.github.io/
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
