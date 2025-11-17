@@ -2,7 +2,7 @@
 
 This repository hosts the official website for Takşa, an open-source factory operating system from the labs of ARTPARK @ IISc.
 
-Our mission is to empower India's manufacturing MSMEs with AI-powered insights and Industry 5.0 capabilities.
+Our mission is to empower manufacturing MSMEs with AI-powered insights and Industry 5.0 capabilities.
 
 ## View Our Live Website
 
@@ -16,7 +16,7 @@ https://taksa-factory.github.io
 
 * What: The Open Source Factory OS
 
-* Mission: Empowering India's Manufacturing. From India, For the World.
+* Mission: Empowering Manufacturing. From India, For the World.
 
 * Partners: ARTPARK @ IISc, Department of Science & Technology, Govt. of Karnataka.
 
