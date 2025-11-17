@@ -14,11 +14,11 @@ https://taksa-factory.github.io
 
 ## About The Project
 
-What: The Open Source Factory OS
+* What: The Open Source Factory OS
 
-Mission: Empowering India's Manufacturing. From India, For the World.
+* Mission: Empowering India's Manufacturing. From India, For the World.
 
-Partners: ARTPARK @ IISc, Department of Science & Technology, Govt. of Karnataka.
+* Partners: ARTPARK @ IISc, Department of Science & Technology, Govt. of Karnataka.
 
 
 To learn more or to get involved, please contact us:
