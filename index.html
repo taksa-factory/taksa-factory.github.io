@@ -69,8 +69,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- **** MODIFICATION: Replaced SVG icon with <img> tag for your logo **** -->
-                    <!-- This will look broken until you upload 'taksa_logo.png' -->
+                    <!-- This now correctly points to your uploaded taksa_logo.png -->
                     <img src="taksa_logo.png" alt="Takşa Logo" class="h-8 w-auto">
                     <span class="ml-3 text-2xl font-bold text-white">Takşa</span>
                 </div>
@@ -116,11 +115,14 @@
             <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">
                 Supported by
             </p>
-            <!-- **** MODIFICATION: Replaced text with <img> tags for partner logos **** -->
+            <!-- **** MODIFICATION: Pointing to your uploaded logos **** -->
             <div class="flex flex-wrap justify-center items-center">
-                <img src="https://eecs.iisc.ac.in/EECS2024/resources/images/logos/ArtPark.png" alt="ARTPARK Logo" class="partner-logo-img" style="filter: brightness(0) invert(1);">
-                <img src="https://eecs.iisc.ac.in/EECS2024/resources/images/logos/iisc-logo-white.png" alt="IISc Logo" class="partner-logo-img">
-                <img src="https://1.bp.blogspot.com/-_G-g-3-B-cQ/Tih-2v-BwUI/AAAAAAAAAbk/1p-1bB-E-gY/s1600/Karnataka+Govt+Logo.png" alt="Government of Karnataka Logo" class="partner-logo-img">
+                <!-- This filter turns your dark logo white -->
+                <img src="artpark_logo.png" alt="ARTPARK Logo" class="partner-logo-img" style="filter: brightness(0) invert(1);">
+                <!-- This filter turns your dark logo white -->
+                <img src="iisc_logo.png" alt="IISc Logo" class="partner-logo-img" style="filter: brightness(0) invert(1);">
+                <!-- This logo is full color, so no filter is applied -->
+                <img src="govt_of_karnataka_logo.png" alt="Government of Karnataka Logo" class="partner-logo-img">
             </div>
         </div>
     </div>
@@ -261,7 +263,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-700">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-base text-gray-400">
+            <p class="text-base text-gray-40Message
                 &copy; 2025 Takşa Factory OS @ ARTPARK
             </p>
             <p class="text-base text-gray-400 mt-1">
