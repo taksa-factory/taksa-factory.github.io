@@ -1,0 +1,114 @@
+/* GLOBAL STYLES */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #020617;
+    /* Deep Slate/Black base */
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* BACKGROUNDS & PATTERNS */
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #020617;
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.15), transparent 80%),
+        radial-gradient(#1e293b 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 32px 32px;
+    background-repeat: no-repeat, repeat;
+}
+
+/* VIDEO HERO STYLES */
+.video-docker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -20;
+}
+
+.video-docker video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.3;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+.video-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(2, 6, 23, 0.8) 0%, rgba(2, 6, 23, 0.6) 50%, #020617 100%);
+    z-index: -15;
+}
+
+/* COMPONENT STYLES */
+.nav-blur {
+    background: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-card {
+    backdrop-filter: blur(1.5px);
+}
+
+.industrial-card {
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.industrial-card:hover {
+    border-color: rgba(45, 212, 191, 0.5);
+    background: rgba(15, 23, 42, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(20, 184, 166, 0.2);
+}
+
+.text-glow {
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+}
+
+/* MARQUEE ANIMATION STYLES */
+.scroller-mask {
+    /* Fades out the edges for a smoother look */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.animate-marquee {
+    /* Time increased to 40s for a smooth, readable speed */
+    animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Move exactly half the width (the length of one set of logos) */
+        /* This creates the seamless infinite effect */
+        transform: translateX(-50%);
+    }
+}
